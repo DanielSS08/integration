@@ -144,6 +144,15 @@ main .cartao-convite .tipo {
 .estudar {
 	background-color: #dba1be;
 }
+
+.ring {
+	background-color: #f7de54;
+}
+
+.fofoca {
+	background-color: #95f754;
+}
+
 main .descricao {
 	max-height: 80px;
 	overflow-y: scroll;
