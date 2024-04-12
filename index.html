@@ -15,7 +15,7 @@
             <img src="assets/img//undraw_pure_love_ay-8-a.svg" alt="">
         </div>
         <div class="form">
-            <form action="#">
+            <form id="myForm" action="#">
                 <div class="form-header">
                     <div class="title">
                         <h1>Vaga: amor da minha vida</h1>
@@ -68,12 +68,12 @@
 
                         <div class="gender-input">
                             <input id="male" type="radio" name="gender">
-                            <label for="male">Masculino</label>
+                            <label for="male">Masculino (Lá ele)</label>
                         </div>
 
                         <div class="gender-input">
                             <input id="others" type="radio" name="gender">
-                            <label for="others">Outros</label>
+                            <label for="others">Outros (🤨) </label>
                         </div>
 
                         <div class="gender-input">
@@ -84,14 +84,18 @@
                 </div>
 
                 <div class="continue-button">
-                    <button id="continue-btn">Continuar</button>
+                    <button type="submit" id="continue-btn">Continuar</button>
                 </div>
             </form>
         </div>
     </div>
     <script>
-        document.getElementById("continue-btn").addEventListener("click", function() {
-            window.location.href = "alert.html";
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            var form = document.getElementById("myForm");
+            if (form.checkValidity()) {
+                window.location.href = "alert.html";
+            }
+            event.preventDefault();
         });
     </script>
 </body>
